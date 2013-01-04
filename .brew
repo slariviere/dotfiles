@@ -20,6 +20,13 @@ brew install wget --enable-iri
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/screen
+brew install homebrew/dupes/rsync
+brew install homebrew/dupes/tcpdump
+brew install homebrew/dupes/nano
+brew install homebrew/dupes/less
+brew install homebrew/dupes/gzip
+brew install homebrew/dupes/openssh
+brew install homebrew/dupes/perl
 
 # Install everything else
 brew install ack
@@ -27,6 +34,13 @@ brew install git
 brew install lynx
 brew install rename
 brew install tree
+brew install htop
+brew install mutt
+brew install mysql
+brew install iftop
+brew install vnstat
+brew install python
+brew install nmap
 
 # Remove outdated versions from the cellar
 brew cleanup
