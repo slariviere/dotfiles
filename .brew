@@ -41,6 +41,11 @@ brew install iftop
 brew install vnstat
 brew install python
 brew install nmap
+brew install tiger-vnc
+brew install dhcping
+brew install echoping
+brew install hping
+brew install httping
 
 # Remove outdated versions from the cellar
 brew cleanup
