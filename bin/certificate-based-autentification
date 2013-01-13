@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+# Create the .ssh folder if it does not exist
+# Transert the certificate to the temprary_authorized_keys file
+# Merge the temprary_authorized_keys and the existing authorized_keys file
+# Clean up after itself
+function transferCertificate {
+    checkCertificate
+    hostname=$(hostname -f)
+    echo "Add the key to the authorized_keys file ..." &&
+    cat ~/.ssh/id_rsa.pub | ssh $2 -l $1 "if [ ! -d ~/.ssh ]; then  echo 'Creating the .ssh folder.' &&  mkdir .ssh && echo 'Generating remote certificate ...'; fi
+                  cat >> ~/.ssh/temprary_authorized_keys &&
+                  echo -e '# ${hostname}' > ~/.ssh/temprary_authorized_keys_combined &&
+                  cat ~/.ssh/temprary_authorized_keys >> ~/.ssh/temprary_authorized_keys_combined &&
+                  cat ~/.ssh/temprary_authorized_keys_combined >> ~/.ssh/authorized_keys &&
+                  rm -f ~/.ssh/temprary_authorized_keys_combined ~/.ssh/temprary_authorized_keys"
+}
+
+function checkCertificate {
+    if [ ! -f ~/.ssh/id_rsa.pub ]; then
+        echo "Generating certificate ..."
+        ssh-keygen
+   fi
+}
+
+# Help argument
+if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+    echo "${0} username remote_hostname"
+    exit
+fi
+
+# Both argument are given
+if [ -n "$1" ] && [ -n "$2" ]; then
+    transferCertificate $1 $2
+    exit 0
+else
+    # Ask for the requied credentials
+    echo -n "> Username [root]: "
+    read username
+    : ${username:="root"}
+    echo -n "> Hostname: "
+    read hostname
+    transferCertificate $username $hostname
+    exit 0
+fi
