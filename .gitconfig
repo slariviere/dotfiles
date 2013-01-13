@@ -1,0 +1,45 @@
+[alias]
+    st = status
+    cm = commit
+    br = branch
+    co = checkout
+    df = diff
+    ls = ls-files
+    initt = init --template=/Users/slariviere/projets/gitconfig/template/
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+
+[apply]
+    whitespace = fix # Detect whitespace errors when applying a patch
+
+[core]
+    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol # Highlight whitespace in diffs
+    # Use custom `.gitignore` and `.gitattributes`
+    excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
+
+[color]
+    ui = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+# URL shortcut
+[url "git://github.com/"]
+  insteadOf = github:
+[url "git@bitbucket.org:slariviere/"]
+  insteadOf = mybit:
+
+[user]
+    name = Sébastien Larivière
+    email = sebastien@lariviere.me
