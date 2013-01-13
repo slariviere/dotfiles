@@ -46,6 +46,7 @@ brew install dhcping
 brew install echoping
 brew install hping
 brew install httping
+brew install ngrep
 
 # Remove outdated versions from the cellar
 brew cleanup
