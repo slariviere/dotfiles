@@ -1,5 +1,5 @@
 # Path
-export PATH=/usr/local/sbin:/usr/local/bin:"$HOME/bin":/usr/local/share/python:"$PATH"
+export PATH=/usr/local/sbin:/usr/local/bin:"$HOME/bin":"$PATH"
 
 # Load the shell dotfiles, and then some:
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
