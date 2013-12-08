@@ -9,7 +9,7 @@ export PS1="\[\033[0;36m\][\u@\h: \[\033[0;31m\]\w\[\033[0;36m\]] \[\033[0m\]"
 # History
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
-shopt -s histappend # Append the history files
+# shopt -s histappend # Append the history files
 export PROMPT_COMMAND='history -a'
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
