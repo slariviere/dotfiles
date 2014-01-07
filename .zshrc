@@ -53,4 +53,4 @@ plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+cdpath=($HOME/projets $HOME)
