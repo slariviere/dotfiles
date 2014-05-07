@@ -16,7 +16,7 @@ export LANG="en_CA"
 
 
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,4 +53,4 @@ plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-cdpath=($HOME/projets $HOME)
+cdpath=($HOME/projets $HOME $HOME/Dowloads)
