@@ -1,9 +1,16 @@
 #!/bin/bash
-cd "$(dirname "${BASH_SOURCE}")"
+
+# Check if an update is available
 git pull
+
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
+    
+    # Get latest version of oh-my-zsh
+    rm -rf ~/.oh-my-zsh
+    git clone git@github.com:slariviere/oh-my-zsh.git ~/.oh-my-zsh
 }
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
 else
@@ -13,5 +20,5 @@ else
 		doIt
 	fi
 fi
+
 unset doIt
-source ~/.bash_profile

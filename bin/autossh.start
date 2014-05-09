@@ -1,0 +1,2 @@
+#!/bin/bash
+autossh -f -M 10000 -N -D 9001 tunnel@k.lariviere.me
