@@ -18,10 +18,9 @@
     alias ulaval="cd $HOME/Google\ Drive/ulaval"
     alias goog="cd $HOME/Google\ Drive/"
     alias runs="python manage.py runserver"
-    alias i="ifconfig && ping -c 3 google.ca"
     alias sc="du . -h --max-dept 1"
     alias hh="history"
-
+    alias vi="vim"
     alias subl-snipplet="subl $HOME/Library/Application\ Support/Sublime\ Text\ 2/Packages"
 
 #typos
@@ -37,4 +36,3 @@
 
 # Enhanced WHOIS lookups
     alias whois="whois -h whois-servers.net"
-
