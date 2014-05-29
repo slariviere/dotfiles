@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source_dmg=$1
+dest_iso=$2
+
+$("/usr/bin/hdiutil convert ${source_dmg} -format UDTO -o ${dest_iso} && mv ${dest_iso}.cdr ${dest_iso})
