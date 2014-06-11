@@ -1,6 +1,3 @@
-" Plugin manager
-execute pathogen#infect()
-filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -22,6 +19,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" More natural splits
+set splitbelow
+set splitright
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -60,6 +61,7 @@ set mat=2
 set foldcolumn=1
 
 set relativenumber
+let mapleader=","
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -123,3 +125,8 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
+
+" Plugin manager
+execute pathogen#infect()
+filetype plugin indent on
+map <leader>f :CommandT<cr>
