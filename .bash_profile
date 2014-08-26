@@ -1,9 +1,4 @@
 # Path
-    # Add `~/bin` to the `$PATH`
-    # export PATH="$HOME/bin":/usr/local/bin:/usr/local/sbin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
-    export PATH=$PATH:/usr/local/sbin:"$HOME/bin":/usr/local/opt/coreutils/libexec/gnubin
-    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-    # export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
@@ -39,9 +34,6 @@ export LANG="en_CA"
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
-
-# Add `killall` tab completion for common apps
-complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion

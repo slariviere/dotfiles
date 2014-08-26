@@ -3,8 +3,6 @@
     export CLICOLOR=1
     # Tell grep to highlight matches
     export GREP_OPTIONS='--color=auto'
-    # Activate grc
-    source "`brew --prefix grc`/etc/grc.bashrc"
 
     # Color for man pages
     export LESS_TERMCAP_mb=$'\E[01;31m'
