@@ -12,6 +12,7 @@
 # shortcuts
     alias hh="history"
     alias vi="vim"
+    alias clip="xclip -sel clip"
 
 #typos
     alias sl="ls"
