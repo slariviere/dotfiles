@@ -21,26 +21,23 @@
 
 [color]
     ui = true
+
 [color "branch"]
     current = yellow reverse
     local = yellow
     remote = green
+
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
     old = red bold
     new = green bold
     whitespace = red reverse
+
 [color "status"]
     added = yellow
     changed = green
     untracked = cyan
-
-# URL shortcut
-[url "git://github.com/"]
-  insteadOf = github:
-[url "git@bitbucket.org:slariviere/"]
-  insteadOf = mybit:
 
 [user]
     name = Sébastien Larivière
