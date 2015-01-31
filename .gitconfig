@@ -7,7 +7,7 @@
     ls = ls-files
     aa = add --all
     dc = diff --cached
-    initt = init --template=/Users/slariviere/projets/gitconfig/template/
+    pom = push origin master
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
 
 [apply]
