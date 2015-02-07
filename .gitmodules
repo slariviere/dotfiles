@@ -1,3 +1,12 @@
 [submodule ".vim/bundle/command-t"]
 	path = .vim/bundle/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "tmux-plugins"]
+	path = .tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
+[submodule "tmux-resurrect"]
+	path = .tmux/plugins/tmux-resurrect
+	url = git@github.com:tmux-plugins/tmux-resurrect.git
+[submodule "tmux-yank"]
+	path = .tmux/plugins/tmux-yank
+	url = git@github.com:tmux-plugins/tmux-yank.git
