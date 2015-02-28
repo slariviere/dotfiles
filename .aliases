@@ -12,10 +12,13 @@
 # shortcuts
     alias hh="history"
     alias vi="vim"
-    alias clip="xclip -sel clip"
+    alias pro="cd ~/projets"
 
 #typos
     alias sl="ls"
     alias gt="git"
     alias gti="git"
+    alias sudp="sudo"
 
+    alias vl='sed "s/\x1c/\//g"'
+    alias clip="xclip -sel clip"
