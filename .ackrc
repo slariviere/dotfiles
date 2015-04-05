@@ -1,7 +1,5 @@
 # Change defaults settings
-
 --smart-case
---pager=less -R
 
 # lexically sort filenames
 --sort-files
