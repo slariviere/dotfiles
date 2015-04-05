@@ -7,16 +7,14 @@ import sys
 import zlib
 import bz2
 
-
 def main():
     data = file_data()
-    size = len(data)
-    print 'file size', size
-    gzip_size = len(zlib.compress(data))
-    print 'gzip size %i (%i%%)' % (gzip_size, percent(gzip_size, size))
-    bz2_size = len(bz2.compress(data))
-    print 'bz2 size %i (%i%%)' % (bz2_size, percent(bz2_size, size))
-
+    size = {}
+    size['file'] = len(data)
+    size['gzip'] = len(zlib.compress(data))
+    size['bz2']  = len(bz2.compress(data))
+    for s, v in size.iteritems():
+        print '%*s %i %i%%' % (4, s, v, percent(v, size['file']))
 
 def file_data():
     files = map(open, sys.argv[1:])
@@ -24,11 +22,8 @@ def file_data():
         files = [sys.stdin]
     return ''.join(f.read() for f in files)
 
-
 def percent(part, whole):
     return int(100.0 * part / whole)
 
-
 if __name__ == '__main__':
     main()
-
