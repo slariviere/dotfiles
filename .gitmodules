@@ -10,3 +10,6 @@
 [submodule "tmux-yank"]
 	path = .tmux/plugins/tmux-yank
 	url = git@github.com:tmux-plugins/tmux-yank.git
+[submodule "tmux-logging"]
+	path = .tmux/plugins/tmux-logging
+	url = git@github.com:tmux-plugins/tmux-logging.git
