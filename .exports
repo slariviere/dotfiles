@@ -17,6 +17,8 @@ export MANPAGER="less -X"
 export LANG="en_CA"
 export LC_ALL="en_CA.UTF-8"
 
+export TERM="xterm-color"
+
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
 export LESS=-FRSMX
