@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "base"
+  
+  # Automatically use root to login
+  config.ssh.username = 'root'
+  config.ssh.password = 'vagrant'
+  config.ssh.insert_key = 'true'
+
+  # Hostname
+  config.vm.hostname = 'vagrant'
+
+  config.vm.provider "vmware_fusion" do |vb|
+    # Customize the amount of memory on the VM:
+    vb.memory = "1024"
+  end
+end
