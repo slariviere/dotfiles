@@ -1,2 +1,2 @@
 #!/bin/bash
-wget -O /dev/null http://cachefly.cachefly.net/100mb.test
+wget -O /dev/null http://cachefly.cachefly.net/400mb.test
