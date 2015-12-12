@@ -1,2 +1,7 @@
 #!/bin/bash
-wget -O /dev/null http://cachefly.cachefly.net/400mb.test
+
+if [ $# -eq 0 ]; then
+    wget -O /dev/null http://cachefly.cachefly.net/400mb.test;
+else
+    wget -O /dev/null https://cachefly.cachefly.net/400mb.test;
+fi
