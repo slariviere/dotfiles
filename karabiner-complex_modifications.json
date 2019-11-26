@@ -1,0 +1,48 @@
+{
+  "title": "Personal rules (@slariviere)",
+  "rules": [
+    {
+      "description": "Replace slash",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+            }
+          },
+          "to": [
+            {
+              "key_code": "slash",
+               "modifiers": [
+                 "right_option"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Replace pipe",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "optional": [
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
