@@ -8,7 +8,7 @@ function doIt() {
     
     # Get latest version of oh-my-zsh
     rm -rf ~/.oh-my-zsh
-    git clone git@github.com:slariviere/oh-my-zsh.git ~/.oh-my-zsh
+    git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -20,5 +20,3 @@ else
 		doIt
 	fi
 fi
-
-unset doIt
