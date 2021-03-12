@@ -11,9 +11,6 @@ unset file
 export LC_ALL="en_CA.UTF-8"
 export LANG="en_CA"
 
-# If possible, add tab completion for many more commands
-[ -f /etc/bash_completion ] && source /etc/bash_completion
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
